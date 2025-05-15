@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Житомир - Візитка міста</title>
+    <!-- Підключення Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Підключення власних стилів -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   <!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Навігаційна панель -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ps-5">
+        <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Coat_of_Arms_of_Zhytomyr.svg/1200px-Coat_of_Arms_of_Zhytomyr.svg.png" alt="Герб Житомира" class="logo-img">
+        </a>
+
+        <!-- Назва сайту або логотип -->
+    <a class="navbar-brand" href="#">Сайт-візитівка міста, якого не існує</a>
+
+        <!-- Гамбургер кнопка -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Перемикач навігації">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Вміст меню -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="navbar-nav ms-4">
+                <a href="#places" class="btn btn-primary me-2 my-1">Чим дивує Житомир</a>
+                <a href="#food" class="btn btn-primary me-2 my-1">Де в Житомирі смачно годують</a>
+                <a href="#footer" class="btn btn-primary me-2 my-1">Відгуки</a>
+                <button id="theme-toggle" class="btn btn-primary me-2 my-1" title="Змінити тему">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Віджет погоди -->
+    <div class="p-3 rounded shadow-sm">
+        <a class="weatherwidget-io" 
+           href="https://forecast7.com/uk/50d2528d66/zhytomyr/" 
+           data-label_1="ZHYTOMYR" 
+           data-label_2="WEATHER" 
+           data-font="Roboto Slab" 
+           data-icons="Climacons Animated" 
+           data-mode="Forecast" 
+           data-days="3" 
+           data-theme="marine">ZHYTOMYR WEATHER</a>
+    </div>
+</div>
+
+<!-- Підключення скрипта для віджета -->
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
+</script>
+
+
+<!-- Головний екран -->
+<header class="hero position-relative">
+    <!-- Відео фон -->
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="header-video.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+    </video>
+
+    <!-- Текст -->
+    <div class="hero-text text-center text-white position-relative">
+        <h1 data-i18n="hero_title">Житомир належить до найдавніших міст України</h1>
+    </div>
+
+    <!-- Кнопка прокрутки вниз -->
+    <button class="btn btn-lg btn-light rounded-circle shadow-lg position-absolute start-50 translate-middle-x d-flex align-items-center justify-content-center scroll-down-btn" style="bottom: 15px; width: 35px; height: 35px;">
+        <div class="triangle"></div>
+    </button>
+
+       
+
+</header>
+ <section id="carousel-section" class="text-center my-5">
+  <h2 class="section-title">Місто з багатою історією та яскравою культурою</h2>
+  <p class="section-description">Поринай в історію, насолоджуйтесь красою і відкривайте для себе Житомир.</p>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://imgur.com/UIAn33H.jpg" alt="Зимовий Житомир" /></div>
+      <div class="swiper-slide"><img src="https://1.zt.ua/wp-content/uploads/2023/06/sokolovskyj-kar_yer.jpg" alt="Літній Житомир" /></div>
+      <div class="swiper-slide"><img src="https://lh5.googleusercontent.com/proxy/Iyi70e4LdGwiXKvptMh_R6lAc2VHyBYH8USRpavEcV_rnM4GMpLlg2HgfeFqOm3-Z--jtzm5_df6_3g9" alt="Нічний Житомир" /></div>
+      <div class="swiper-slide"><img src="https://scontent.fiev26-1.fna.fbcdn.net/v/t39.30808-6/494997182_1773812243205297_8233093588256041951_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=qblg1zsDLxUQ7kNvwEFBSP6&_nc_oc=AdlpkLYa-aYqUSmqW1DHh0kQWC7P7paMgZdz51qZTXf3X0YMySsP3qWiCCt_JGydSCM&_nc_zt=23&_nc_ht=scontent.fiev26-1.fna&_nc_gid=G_d8PSEuzFOwVd31EjR5Jg&oh=00_AfJZuxuJIU6fafJ3qYI7Cmkpcjf4YdIOjaE5Tlu7068sQg&oe=682B8303" alt="Житомир влітку" /></div>
+      <div class="swiper-slide"><img src="https://ua-travels.in.ua/wp-content/uploads/2021/03/photo_2021-02-24_18-55-29-2-1-750x500.jpg" alt="Житомир взимку" /></div>
+      <div class="swiper-slide"><img src="https://moemisto.ua/uploads/media/ckeditor/0003/95/eba6e08017a9db598af6e2d56fcdf7326c15604b.jpeg?hash=2019-03-15-14-44-13" alt="Нічний краєвид Житомира" /></div>
+      <div class="swiper-slide"><img src="https://focus.ua/static/storage/thumbs/1200x630/8/2d/773da09d-976f238037d611fd8449949b2bce52d8.webp?v=7016_1" alt="Краєвид Житомира" /></div>
+      <div class="swiper-slide"><img src="https://freshnews.zt.ua/upload/iblock/720/72099ac357b5894d0f11c002cbe13944.jpg" alt="Краєвид Житомира" /></div>
+      <div class="swiper-slide"><img src="https://focus.ua/static/storage/thumbs/1088x/7/d0/4011b0dd-130e04ca17557eed03e4d7487c1a3d07.jpg" alt="Краєвид Житомира" /></div>
+      <div class="swiper-slide"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/%D0%96%D0%B8%D1%82%D0%BE%D0%BC%D0%B8%D1%80_%D0%B2_%D0%B8%D1%8E%D0%BD%D0%B5_2020_%D0%B3%D0%BE%D0%B4%D0%B0%2C_34.jpg" alt="Краєвид Житомира" /></div>
+      <div class="swiper-slide"><img src="https://zhzh.info/_nw/282/70368225.jpg" alt="Краєвид Житомира" /></div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- Чим дивує Житомир -->
+<section id="places" class="container my-5">
+    <h2 class="section-title">Чим дивує Житомир</h2>
+    <div class="places-grid">
+        <!-- картки -->
+        <div class="place-card large">
+            <img src="https://start-s.com.ua/wp-content/uploads/2021/07/golova-1.jpg" alt="Голова Чадського" />
+            <h5>Голова Чадського</h5>
+            <p>Геологічна пам'ятка природи місцевого значення в Україні.</p>
+        </div>
+        <div class="place-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Korolev-museum-zhytomyr.jpg/1200px-Korolev-museum-zhytomyr.jpg" alt="Музей космонавтики" />
+            <h5>Музей космонавтики</h5>
+            <p>Музей космонавтики на батьківщині Сергія Павловича Корольова.</p>
+        </div>
+        <div class="place-card medium">
+            <img src="https://1.zt.ua/wp-content/uploads/2021/11/mist.jpg" alt="Пішохідний міст" />
+            <h5>Пішохідний міст</h5>
+            <p>Підвісний пішохідний міст на висоті 43 метри в парку імені Гагаріна.</p>
+        </div>
+        <div class="place-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/%D0%92%D0%BE%D0%B4%D0%BE%D0%BD%D0%B0%D0%BF%D1%96%D1%80%D0%BD%D0%B0_%D0%B2%D0%B5%D0%B6%D0%B0_%28%D0%96%D0%B8%D1%82%D0%BE%D0%BC%D0%B8%D1%80%29.jpg" alt="Водонапірна башта" />
+            <h5>Водонапірна башта</h5>
+            <p>Споруда в Житомирі для регулювання тиску води та протиповітряної оборони.</p>
+        </div>
+        <div class="place-card large">
+            <img src="https://zt.20minut.ua/img/cache/photogallery_full/photogallery/0018/55/cc39609e4344cb1f7c7e4a25902ced6d7d501139.jpeg?hash=2020-04-24-11-49-11" alt="Гідропарк" />
+            <h5>Гідропарк</h5>
+            <p>Зона відпочинку в лісопарковій зоні, Житомирський гідропарк.</p>
+        </div>
+        <div class="place-card medium">
+            <img src="https://f.mixsport.pro/photo/5973/a49UT.jpg" alt="Шодуарівський парк" />
+            <h5>Шодуарівський парк</h5>
+            <p>Парк-пам'ятка садово-паркового мистецтва, назва на честь барона де Шодуара.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Розділ "Де в Житомирі смачно годують" -->
+    <section id="food" class="container my-5">
+        <h2 class="section-title text-center">Де в Житомирі смачно годують</h2>
+        <div class="row">
+            <!-- Карточка BABUIN -->
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="d-flex">
+                        <img src="https://cdn-media.choiceqr.com/prod-eat-babuin/thumbnail_jauzhBm-HVEdIHj-jLkCDIN_F-I-w.jpeg" class="card-img-top me-3" alt="Ресторан 1" style="width: 150px; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title">Babuin</h5>
+                            <p class="card-text">Твій ідеальний варіант відпочинку у Житомирі. Найкращий ресторан міста🥂</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Дізнатися більше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальне вікно для Babuin -->
+            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal1Label">Babuin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Елітний ресторан для любителів м’ясних страв. Насолоджуйтесь живими музичними виступами, стендапом або діджей-сетами в унікальній атмосфері.</p>
+                            <p>Заклад знаходиться по адресі вул.Бориса Лятошинського, 4</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка Черепаха -->
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="d-flex">
+                        <img src="https://zhytomyr.bestrest.com.ua/sites/default/files/styles/thumb-200px/public/images/info/241070/241070.jpg?itok=0atjODN2" class="card-img-top me-3" alt="Ресторан 2" style="width: 150px; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title">Черепаха</h5>
+                            <p class="card-text">Суші-бар "Черепаха" - відрізняється сучасним інтер'єром і традиційної японською кухнею.🍣🍱</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Дізнатися більше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальне вікно для Черепаха -->
+            <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal2Label">Черепаха</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Меню бару це більше 50 позицій різноманітних ролів та суші, а також фірмових супів та салатів.</p>
+                            <p>Заклад знаходиться по адресі вул.Київська, 77</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка Хочу ребра -->
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="d-flex">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuM5SMMhognGeDRcyObfBC0RLz6TxXwV3716q8KP8d1Dfedaz8" class="card-img-top me-3" alt="Ресторан 3" style="width: 150px; height: auto;">
+                        <div class="card-body">
+                            <h5 class="card-title">Хочу Ребера</h5>
+                            <p class="card-text">Справжня реберня з унікальним мангалом для приготування соковитих реберець.🍖</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Дізнатися більше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальне вікно для Хочу Ребера -->
+            <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal3Label">Хочу Ребера</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Справжня реберня з унікальним мангалом для приготування соковитих реберець. Меню поєднує американську, європейську та українську кухню, а атмосфера підходить як для сімей, так і для компаній друзів.</p>
+                            <p>Заклад знаходиться по адресі вул.Михайлівська, 20</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Ресторан  Mario -->
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="d-flex">
+                            <img src="https://spf.zu.edu.ua/img/new_2016/akad/2.JPG" class="card-img-top me-3" alt="Ресторан 4" style="width: 150px; height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Mario</h5>
+                                <p class="card-text">Завітавши в Маріо, ви на власні очі побачите, як кухар готує і випікає піцу на дровах.🍕🔥</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">Дізнатися більше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Модальне вікно для Mario -->
+                <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal4Label">Mario</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Саме в «Маріо» можна насолодитися смачним, поживним сніданком навіть в обід! Якщо вечір був насичений і ви прокинулися далеко за дванадцяту.</p>
+                                <p>Заклад знаходиться по адресі вул.Київська, 77</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ресторан  Хочу Зїсти -->
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="d-flex">
+                            <img src="https://company-logo-frankfurt.robota.ua/cdn-cgi/image/w=237/4258934_20230329122150.jpeg" class="card-img-top me-3" alt="Ресторан 5" style="width: 150px; height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Хочу Зїсти</h5>
+                                <p class="card-text">Затишне сімейне кафе👪🍽️</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">Дізнатися більше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Модальне вікно для Хочу Зїсти -->
+                <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal5Label">Хочу Зїсти</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>“Хочу З’їсти” – затишне сімейне кафе, де ви зможете насолодитися стравами європейської та української кухні. Ідеальне місце для сімейних зустрічей у комфортній атмосфері.</p>
+                                <p>Заклад знаходиться по адресі вул.Старий бульвар, 10</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ресторан  Sharikava -->
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="d-flex">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdyH3eVRaV__HPN2LY5GlcKs62dBLkLLW8JewNz7YOPi7d6g4V3pOxKc7Bx2zEEGV2AnM&usqp=CAU" class="card-img-top me-3" alt="Ресторан 6" style="width: 150px; height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sharikava</h5>
+                                <p class="card-text">Обʼєднуємо чашкою кави ☕️</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">Дізнатися більше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Модальне вікно для Sharikava -->
+                <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal6Label">Sharikava</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Основним продуктом є кавові напої, чаю, різноманітні коктейлі, солодощі, а також випічка з власної пекарні.</p>
+                                <p>Заклад знаходиться по адресі вул.Михайлівська, 18</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ресторан Плезентвіль -->
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="d-flex">
+                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTtOuq6NHcz_dYyZq2kQ-zASY-yWUZ8rBlXwh0EwJM8Cm8XwX8V" class="card-img-top me-3" alt="Ресторан 7" style="width: 150px; height: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Плезентвіль</h5>
+                                <p class="card-text">🍔 ТОП-бургери 🥩 Страви на відкритому вогні 🍻 Крафтове пиво </p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal7">Дізнатися більше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Модальне вікно для Плезентвіль -->
+                <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal7Label">Плезентвіль</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>«Добиратися в «Pleasantville» зручно з будь-якого напрямку. Їдеш з Києва — їдь прямо. Кожен скаже, де кінотеатр «Україна», тому що саме це і буде основним орієнтиром. Хочеш потрапити з західного напрямку? Їдь до площі Перемоги і наліво, потім перед старим костелом (до речі, одна з найстаріших історичних споруд в місті) знову наліво. Повз не проїдеш.</p>
+                                <p>Заклад знаходиться по адресі вул.Київська, 13</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+   <!-- Футер -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Копірайт -->
+      <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+        © 2025 Лакійчук Володимир. Усі права захищено.
+      </div>
+
+      <!-- Корисні посилання -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+  <h5>Корисні лінки</h5>
+  <ul class="list-unstyled mt-3"> 
+          <li><a href="https://zt-rada.gov.ua" class="text-white text-decoration-none">Офіційний сайт міста</a></li>
+          <li><a href="https://www.google.com/maps/@50.2554617,28.623347,13.5z?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="text-white text-decoration-none">Карта міста</a></li>
+        </ul>
+      </div>
+
+      <!-- Контакти -->
+      <div class="col-md-4 text-center text-md-end">
+        <a href="mailto:yusukeforyou@gmail.com" class="text-white d-block mb-2">yusukeforyou@gmail.com</a>
+       <a href="https://www.instagram.com/vova_lakiychuk__?igsh=MTZxemowOGZ3eTNvcg==" target="_blank" class="text-white me-3 fs-4">
+  <i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61574258062528" target="_blank" class="text-white fs-4">
+  <i class="fab fa-facebook-f"></i>
+</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Підключення Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Стиль для модального вікна */
+        .modal-content {
+            background-color: #f8f9fa; /* Світлий фон для контенту */
+            color: #333; /* Текст темного кольору для кращої видимості */
+        }
+
+        /* Стиль для заголовку в модальному вікні */
+        .modal-header .modal-title {
+            color: #007bff; /* Синій колір для заголовка */
+        }
+
+        /* Стиль для тексту в модальному вікні */
+        .modal-body p {
+            color: #000; /* Чорний текст для тіла модального вікна */
+        }
+
+        /* Стиль для кнопок в модальному вікні */
+        .modal-footer .btn-secondary {
+            background-color: #6c757d; /* Темно-сірий фон для кнопки закриття */
+            color: white;
+        }
+    </style>
+</head>
+
+    <!-- Підключення власного JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        function toggleDetails(detailId) {
+            const detailElement = document.getElementById(detailId);
+            if (detailElement.style.display === "none") {
+                detailElement.style.display = "block"; // Показати деталі
+            } else {
+                detailElement.style.display = "none"; // Сховати деталі
+            }
+        }
+    </script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 150,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+</body>
+</html>
+
